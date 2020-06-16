@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:rsb="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadeScrollbars="false"
+    android:layout_weight="1"
+    android:fillViewport="true">
+
+    <RelativeLayout
+
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="303dp"
+            android:layout_height="350dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/dp20"
+            android:layout_marginTop="@dimen/dp5"
+            android:layout_marginRight="@dimen/dp20" />
+
+
+        <org.florescu.android.rangeseekbar.RangeSeekBar
+            android:id="@+id/rangeSeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/videoView"
+            android:layout_marginTop="@dimen/dp5"
+            app:showLabels="false"
+            rsb:activeColor="#ED1C24"
+            rsb:barHeight="1dp"
+            rsb:textAboveThumbsColor="#000000" />
+
+        <TextView
+            android:id="@+id/tvLeft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/rangeSeekBar"
+            android:layout_alignStart="@+id/rangeSeekBar"
+            android:layout_below="@+id/rangeSeekBar"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/tvRight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/rangeSeekBar"
+            android:layout_alignRight="@+id/rangeSeekBar"
+            android:layout_below="@+id/rangeSeekBar"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/tvInstructions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRight"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="@dimen/dp5"
+            android:gravity="center"
+            android:text="@string/rangeSeekBarText"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/uploadVideo"
+            android:layout_width="@dimen/dp200"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvInstructions"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/dp10"
+            android:layout_marginEnd="105dp"
+            android:background="@color/colorGreen"
+            android:gravity="center"
+            android:padding="@dimen/dp5"
+            android:text="@string/uploadVideo"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/sp16" />
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_below="@+id/uploadVideo"
+                        android:id="@+id/btnCompressVideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="0dp"
+                        android:visibility="gone"
+                        android:padding="10dp"
+                        app:cardBackgroundColor="#ffffff"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="50dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/zip" />
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="1dp"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:paddingTop="15dp"
+                                android:text="Compress Video"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="20dp" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_below="@+id/uploadVideo"
+                        android:id="@+id/btnCutVideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="10dp"
+                        android:visibility="gone"
+                        app:cardBackgroundColor="#ffffff"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="50dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/cut" />
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="1dp"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:paddingTop="15dp"
+                                android:text="Cut Video Now"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="20dp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_below="@+id/uploadVideo"
+                        android:id="@+id/btnExtractImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="40dp"
+                        android:visibility="gone"
+
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="10dp"
+                        app:cardBackgroundColor="#ffffff"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="50dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/image" />
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="1dp"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:paddingTop="15dp"
+                                android:text="Extract Image Now"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="20dp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_below="@+id/uploadVideo"
+                        android:id="@+id/btnExtractAudio"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="10dp"
+                        android:visibility="gone"
+
+                        app:cardBackgroundColor="#ffffff"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="50dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/audio" />
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="1dp"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:paddingTop="15dp"
+                                android:text="Extract Audio Now"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="20dp" />
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_below="@+id/uploadVideo"
+                        android:id="@+id/btnFadeInOut"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="10dp"
+                        android:visibility="gone"
+
+                        app:cardBackgroundColor="#ffffff"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="50dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/fade" />
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="1dp"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:paddingTop="15dp"
+                                android:text="Fade In-Out Now"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="20dp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_below="@+id/uploadVideo"
+                        android:id="@+id/btnFastMotion"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="10dp"
+                        android:visibility="gone"
+
+                        app:cardBackgroundColor="#ffffff"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="50dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/fast" />
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="1dp"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:paddingTop="15dp"
+                                android:text="Fast Motion Now"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="20dp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_below="@+id/uploadVideo"
+                        android:id="@+id/btnSlowMotion"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="40dp"
+                        android:visibility="gone"
+
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="10dp"
+                        app:cardBackgroundColor="#ffffff"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="50dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/slow" />
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="1dp"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:paddingTop="15dp"
+                                android:text="Slow Motion Now"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="20dp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_below="@+id/uploadVideo"
+                        android:id="@+id/btnReverseVideo"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="40dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginBottom="0dp"
+                        android:padding="10dp"
+                        android:visibility="gone"
+
+                        app:cardBackgroundColor="#ffffff"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="50dp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:weightSum="3">
+
+                            <ImageView
+                                android:layout_width="20dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="10dp"
+                                android:layout_weight="1"
+                                android:src="@drawable/reverse" />
+
+                            <TextView
+                                android:layout_width="120dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="1dp"
+                                android:layout_weight="1"
+                                android:gravity="left"
+                                android:paddingTop="15dp"
+                                android:text="Reverse video Now"
+                                android:textColor="@color/colorBlack"
+                                android:textSize="20dp" />
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+    </RelativeLayout>
+</ScrollView>

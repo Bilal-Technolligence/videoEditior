@@ -1,0 +1,460 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    tools:context=".activity.HomeActivity">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:id="@+id/victumlayout"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="650dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnCompressVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="0dp"
+                    android:padding="10dp"
+                    app:cardBackgroundColor="#ffffff"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/zip" />
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="1dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:paddingTop="15dp"
+                            android:text="Compress Video"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_chevron_right_black_24dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnCutVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="0dp"
+                    android:padding="10dp"
+                    app:cardBackgroundColor="#ffffff"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/cut" />
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="1dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:paddingTop="15dp"
+                            android:text="Cut Video"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_chevron_right_black_24dp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnExtractImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="0dp"
+                    android:padding="10dp"
+                    app:cardBackgroundColor="#ffffff"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/image" />
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="1dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:paddingTop="15dp"
+                            android:text="Extract Image"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_chevron_right_black_24dp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <!--                    <androidx.cardview.widget.CardView-->
+                <!--                        android:id="@+id/btnRescue"-->
+                <!--                        android:layout_width="match_parent"-->
+                <!--                        android:layout_height="60dp"-->
+                <!--                        android:layout_marginLeft="15dp"-->
+                <!--                        android:layout_marginTop="4dp"-->
+                <!--                        android:layout_marginRight="15dp"-->
+                <!--                        android:layout_marginBottom="0dp"-->
+                <!--                        android:padding="10dp"-->
+                <!--                        app:cardBackgroundColor="#ffffff"-->
+                <!--                        app:cardCornerRadius="10dp"-->
+                <!--                        app:cardElevation="50dp">-->
+
+                <!--                        <LinearLayout-->
+                <!--                            android:layout_width="match_parent"-->
+                <!--                            android:layout_height="match_parent"-->
+                <!--                            android:orientation="horizontal"-->
+                <!--                            android:weightSum="3">-->
+
+                <!--                            <ImageView-->
+                <!--                                android:layout_width="20dp"-->
+                <!--                                android:layout_height="wrap_content"-->
+                <!--                                android:layout_margin="10dp"-->
+                <!--                                android:layout_weight="1"-->
+                <!--                                android:src="@drawable/alertrescue" />-->
+
+                <!--                            <TextView-->
+                <!--                                android:layout_width="120dp"-->
+                <!--                                android:layout_height="match_parent"-->
+                <!--                                android:layout_marginTop="1dp"-->
+                <!--                                android:layout_weight="1"-->
+                <!--                                android:gravity="left"-->
+                <!--                                android:paddingTop="15dp"-->
+                <!--                                android:text="Alert Rescue"-->
+                <!--                                android:textColor="@color/colorBlack"-->
+                <!--                                android:textSize="20dp" />-->
+
+                <!--                            <ImageView-->
+                <!--                                android:layout_width="20dp"-->
+                <!--                                android:layout_height="40dp"-->
+                <!--                                android:layout_marginLeft="10dp"-->
+                <!--                                android:layout_marginTop="11dp"-->
+                <!--                                android:layout_weight="1"-->
+                <!--                                android:src="@drawable/ic_chevron_right_black_24dp" />-->
+                <!--                        </LinearLayout>-->
+
+
+                <!--                    </androidx.cardview.widget.CardView>-->
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnExtractAudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="0dp"
+                    android:padding="10dp"
+                    app:cardBackgroundColor="#ffffff"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/audio" />
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="1dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:paddingTop="15dp"
+                            android:text="Extract Audio"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_chevron_right_black_24dp" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnFadeInOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="0dp"
+                    android:padding="10dp"
+                    app:cardBackgroundColor="#ffffff"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/fade" />
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="1dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:paddingTop="15dp"
+                            android:text="Fade In-Out"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_chevron_right_black_24dp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnFastMotion"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="0dp"
+                    android:padding="10dp"
+                    app:cardBackgroundColor="#ffffff"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/fast" />
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="1dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:paddingTop="15dp"
+                            android:text="Fast Motion"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_chevron_right_black_24dp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnSlowMotion"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="0dp"
+                    android:padding="10dp"
+                    app:cardBackgroundColor="#ffffff"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/slow" />
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="1dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:paddingTop="15dp"
+                            android:text="Slow Motion"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_chevron_right_black_24dp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/btnReverseVideo"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="0dp"
+                    android:padding="10dp"
+                    app:cardBackgroundColor="#ffffff"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="3">
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/reverse" />
+
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="1dp"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:paddingTop="15dp"
+                            android:text="Reverse video"
+                            android:textColor="@color/colorBlack"
+                            android:textSize="20dp" />
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="11dp"
+                            android:layout_weight="1"
+                            android:src="@drawable/ic_chevron_right_black_24dp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
