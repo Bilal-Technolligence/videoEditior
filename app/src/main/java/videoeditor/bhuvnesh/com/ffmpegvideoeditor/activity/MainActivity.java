@@ -18,6 +18,13 @@ import android.os.Environment;
 import android.os.Handler;
 import android.provider.DocumentsContract;
 import android.provider.MediaStore;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import com.google.android.material.snackbar.Snackbar;
 
 import androidx.cardview.widget.CardView;
@@ -70,7 +77,7 @@ public class MainActivity extends AppCompatActivity {
     private int duration;
     private Context mContext;
     private String[] lastReverseCommand;
-
+    InterstitialAd mInterstitialAd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -81,6 +88,7 @@ public class MainActivity extends AppCompatActivity {
 
         setContentView(R.layout.activity_main);
         mContext = this;
+        ads();
         final TextView uploadVideo = (TextView) findViewById(R.id.uploadVideo);
         CardView cutVideo = (CardView) findViewById(R.id.btnCutVideo);
         CardView compressVideo = (CardView) findViewById(R.id.btnCompressVideo);
@@ -1055,6 +1063,29 @@ public class MainActivity extends AppCompatActivity {
         textDialog.setContentView(R.layout.dialog_singleoption_text);
         textDialog.setCancelable(false);
         return textDialog;
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        }
+        super.onBackPressed();
+    }
+
+    private void ads() {
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        AdView mAdView = findViewById(R.id.adView);
+        mAdView.loadAd(new AdRequest.Builder().build());
+        //inter
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
     }
 
 }

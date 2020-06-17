@@ -7,11 +7,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
+
 import videoeditor.bhuvnesh.com.ffmpegvideoeditor.R;
 
 public class HomeActivity extends AppCompatActivity {
     CardView btnCompress,btnVideoCut,btnImageExtract,btnAudioExtract,btnFade,btnFast,btnReverse,btnSlow;
-
+    InterstitialAd mInterstitialAd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +31,7 @@ public class HomeActivity extends AppCompatActivity {
         btnFast =findViewById(R.id.btnFastMotion);
         btnSlow =findViewById(R.id.btnSlowMotion);
         btnReverse =findViewById(R.id.btnReverseVideo);
+        ads();
         btnCompress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,5 +100,28 @@ public class HomeActivity extends AppCompatActivity {
 
 
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (mInterstitialAd.isLoaded()) {
+            mInterstitialAd.show();
+        }
+        super.onBackPressed();
+    }
+
+    private void ads() {
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        AdView mAdView = findViewById(R.id.adView);
+        mAdView.loadAd(new AdRequest.Builder().build());
+        //inter
+
+        mInterstitialAd = new InterstitialAd(this);
+        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
+        mInterstitialAd.loadAd(new AdRequest.Builder().build());
     }
 }

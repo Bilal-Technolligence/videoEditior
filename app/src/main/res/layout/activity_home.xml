@@ -456,5 +456,11 @@
         </LinearLayout>
     </ScrollView>
 
-
+    <include layout="@layout/banner_ad"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_margin="5dp"
+        android:id="@+id/include"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"></include>
 </RelativeLayout>
